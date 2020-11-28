@@ -5,11 +5,7 @@ const motoristasSchema = new mongoose.Schema({
     id: { type: Number },
     nome: { type: String },
     bairros: { type: String },
-    ativo: { type: Boolean },
-    horario: { type: String },
-    bootcamp: { type: Boolean },
-    quantidadeAlunos: { type: Number },
-    gratuito: { type: Boolean },
+    horarios: { type: String },
     cidade: { type: String },
     estado: { type: String },
 },{

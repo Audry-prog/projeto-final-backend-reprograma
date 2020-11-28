@@ -6,6 +6,18 @@ const getAll = (req, res) => {
     })
 };
 
+const postMotorista = (req, res) => {
+    console.log("Cheguei aqui")
+  let motorista = new motoristas(req.body);
+  motorista.save(err => {
+    err ? res.status(424).send({ message: err.message }) 
+    : res.status(201).send({
+        status: true,
+        message: 'Novo Motorista cadastrado com sucesso'
+      });
+  });
+};
+
 const getById = (req, res) => {
     const id = req.params.id;
     motoristas.find({ id }, (err, motoristas) => {
@@ -15,17 +27,6 @@ const getById = (req, res) => {
            res.status(200).send(motoristas)  
         }
     })
-};
-
-const postMotorista = (req, res) => {
-  let motorista = new motoristas(req.body);
-  motorista.save(err => {
-    err ? res.status(424).send({ message: err.message }) 
-    : res.status(201).send({
-        status: true,
-        message: 'Novo Motorista cadastrado com sucesso'
-      });
-  });
 };
 
 const deleteMotorista = (req, res) => {
@@ -57,8 +58,8 @@ const putMotorista = (req, res) => {
 
 module.exports = {
     getAll,
-    getById,
     postMotorista,
+    getById,
     deleteMotorista,    
     putMotorista
 };

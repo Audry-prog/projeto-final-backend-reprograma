@@ -1,17 +1,17 @@
 {
   "name": "projeto-final-backend-reprograma",
   "version": "1.0.0",
-  "description": "",
+  "description": "PetRide",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Audry-prog/projeto-final-backend-reprograma.git"
   },
-  "author": "",
+  "author": "Audry Ávalos",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Audry-prog/projeto-final-backend-reprograma/issues"
