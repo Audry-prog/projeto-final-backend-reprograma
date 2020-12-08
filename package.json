@@ -23,6 +23,8 @@
   },
   "dependencies": {
     "body-parser": "^1.19.0",
+    "dotenv-safe": "^8.2.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.17"
   }
 }

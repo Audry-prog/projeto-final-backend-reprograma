@@ -7,10 +7,9 @@
 
 ## PetRide:
 
-O projeto PetRide é uma API que consiste na realização de um cadastro para motoristas que queiram ajudar no transporte solidário de cães e gatos. 
+O projeto PetRide é uma API que consiste na realização de um cadastro para motoristas que queiram ajudar no transporte solidário de pets. 
 
-A interface será um CRUD completo integrado com um banco de dados, onde será possível listar os motoristas cadastrados na base de dados; cadastrar novos motoristas; atualizar dados; visualizar horários, dias disponíveis, e bairros onde o motorista se propõe a transportar; entre outros.
-
+A interface será um CRUD completo integrado com um banco de dados, onde será possível listar os motoristas cadastrados na base de dados; cadastrar novos motoristas; atualizar dados; visualizar horários, dias disponíveis e bairros onde o motorista se propõe a transportar.
 ## Recursos que serão utilizados:
 
 * Node.Js;

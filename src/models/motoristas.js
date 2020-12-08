@@ -4,10 +4,15 @@ const mongoose = require('mongoose');
 const motoristasSchema = new mongoose.Schema({
     id: { type: Number },
     nome: { type: String },
-    bairros: { type: String },
-    horarios: { type: String },
+    email: { type: String },
+    rg: { type: String },
+    senha: { type: String },
+    telefone: { type: String },
+    bairros: [{ type: String }],
+    horarios: [{ type: String }],
     cidade: { type: String },
     estado: { type: String },
+    despesaTrajeto: { type: String }
 },{
     //gera por padrão uma versão para cada atualização do documento
     versionKey: false

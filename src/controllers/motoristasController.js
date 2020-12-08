@@ -6,16 +6,26 @@ const getAll = (req, res) => {
     })
 };
 
+const getAllMotoristasByBairro = (req, res) => {
+    const bairro = req.query.bairro 
+        if (bairro) { 
+            const motoristasByBairro = motoristas.filter(motorista => motorista.bairro.includes(bairro)) // encontro todos os filmes do gênero que filtrei
+        res.status(200).send(motoristasByBairro) 
+      } else { 
+        res.status(404).send('Bairro não encontrado'); 
+    }
+}
+
 const postMotorista = (req, res) => {
-    console.log("Cheguei aqui")
-  let motorista = new motoristas(req.body);
-  motorista.save(err => {
-    err ? res.status(424).send({ message: err.message }) 
-    : res.status(201).send({
-        status: true,
+    let motorista = new motoristas(req.body);
+    motorista.save(err => {
+        err ? res.status(424).send({ message: err.message })
+        
+        : res.status(201).send({
+            status: true,
         message: 'Novo Motorista cadastrado com sucesso'
-      });
-  });
+    });
+});
 };
 
 const getById = (req, res) => {
@@ -33,7 +43,7 @@ const deleteMotorista = (req, res) => {
     const id = req.params.id;
     motoristas.find({ id }, (err, motorista) => {
         if (motorista.length > 0) {
-            cursos.deleteOne({ id }, err => {
+            motoristas.deleteOne({ id }, err => {
                 err ? res.status(424).send({ message: err.message }) : res.status(200).send({
                     status: true,
                     mensagem: 'Motorista excluído com sucesso'
@@ -58,6 +68,7 @@ const putMotorista = (req, res) => {
 
 module.exports = {
     getAll,
+    getAllMotoristasByBairro,
     postMotorista,
     getById,
     deleteMotorista,    
