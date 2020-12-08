@@ -6,7 +6,7 @@ const motoristas = require('../models/motoristas');
 		const motoristasByBairro = motoristas.filter((motorista) => motorista.bairro.includes(bairro));
 		res.status(200).send(motoristasByBairro);
 	} else {
-		res.status(200).send("Não há motoristas com o bairro cadastrado.");
+		res.status(404).send("Não há motoristas com o bairro cadastrado.");
 	}
 };*/
 
