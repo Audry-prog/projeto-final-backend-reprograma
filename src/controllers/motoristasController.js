@@ -12,7 +12,7 @@ const getAllMotoristasByBairro = (req, res) => {
 		const motoristasByBairro = motoristas.filter((motorista) => motorista.bairro.includes(bairro));
 		res.status(200).send(motoristasByBairro);
 	} else {
-		res.status(404).send('Bairro não encontrado');
+		res.status(404).send('Motoristas sem Bairro cadastrado');
 	}
 };
 
