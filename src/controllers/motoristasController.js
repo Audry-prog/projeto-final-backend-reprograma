@@ -1,14 +1,14 @@
 const motoristas = require('../models/motoristas');
 
-/*const getAllMotoristasByBairro = (req, res) => {
-	const bairro = req.query.bairro;
-	if (bairro) {
-		const motoristasByBairro = motoristas.filter((motorista) => motorista.bairro.includes(bairro));
-		res.status(200).send(motoristasByBairro);
-	} else {
-		res.status(404).send("Não há motoristas com o bairro cadastrado.");
-	}
-};*/
+const getMotoristasByBairro = (req, res) => {
+    const bairro = req.query.bairro;  
+    motoristas.find({ bairros: bairro }, function(err, motoristas){
+      if(err) { 
+        res.status(500).send({ message: err.message })
+      }
+      res.status(200).send(motoristas);
+  })
+};
 
 const getAll = (req, res) => {
 	motoristas.find(function (err, motoristas) {
@@ -69,10 +69,10 @@ const putMotorista = (req, res) => {
 };
 
 module.exports = {
-    /*getAllMotoristasByBairro,*/
+    getMotoristasByBairro,
     getAll,
 	postMotorista,
 	getById,
 	deleteMotorista,
 	putMotorista,
-};
+}
