@@ -20,6 +20,7 @@ db.once("open", function(){
 //rotas
 const index = require("./routes/index");
 const motoristas = require("./routes/motoristasRoute");
+const tutores = require("./routes/tutoresRoute");
 
 app.use(bodyParser.json()); 
 
@@ -34,5 +35,6 @@ app.use(function (req, res, next) {
   
 app.use("/", index);
 app.use("/motoristas", motoristas);
+app.use("/tutores", tutores);
 
 module.exports = app;
