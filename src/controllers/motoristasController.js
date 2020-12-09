@@ -1,5 +1,6 @@
 const motoristas = require('../models/motoristas');
 const SECRET = process.env.SECRET;
+const jwt = require('jsonwebtoken');
 
 const getMotoristasByBairro = (req, res) => {
 	const bairro = req.query.bairro;
@@ -13,8 +14,17 @@ const getMotoristasByBairro = (req, res) => {
 
 const getAll = (req, res) => {
 	const authHeader = req.get('authorization');
-	motoristas.find(function (err, motoristas) {
-		err ? res.status(424).send({ message: err.message }) : res.status(200).send(motoristas);
+	if (!authHeader) {
+		return res.status(401).send('Header não encontrado.');
+	}
+	const token = authHeader.split(' ')[1];
+	jwt.verify(token, SECRET, function (err) {
+		if (err) {
+			return res.status(403).send('Token inválido.');
+		}
+		motoristas.find(function (err, motoristas) {
+			err ? res.status(424).send({ message: err.message }) : res.status(200).send(motoristas);
+		});
 	});
 };
 

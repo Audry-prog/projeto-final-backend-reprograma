@@ -30,9 +30,9 @@ app.use(function (req, res, next) {
     "Origin, X-Requested-With, Content-Type, Accept"
     )
     next()
-  })
+  });
   
-app.use("/", index)
-app.use("/motoristas", motoristas)
+app.use("/", index);
+app.use("/motoristas", motoristas);
 
 module.exports = app;
