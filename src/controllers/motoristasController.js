@@ -1,16 +1,18 @@
 const motoristas = require('../models/motoristas');
+const SECRET = process.env.SECRET;
 
 const getMotoristasByBairro = (req, res) => {
-    const bairro = req.query.bairro;  
-    motoristas.find({ bairros: bairro }, function(err, motoristas){
-      if(err) { 
-        res.status(500).send({ message: err.message })
-      }
-      res.status(200).send(motoristas);
-  })
+	const bairro = req.query.bairro;
+	motoristas.find({ bairros: bairro }, function (err, motoristas) {
+		if (err) {
+			res.status(500).send({ message: err.message });
+		}
+		res.status(200).send(motoristas);
+	});
 };
 
 const getAll = (req, res) => {
+	const authHeader = req.get('authorization');
 	motoristas.find(function (err, motoristas) {
 		err ? res.status(424).send({ message: err.message }) : res.status(200).send(motoristas);
 	});
@@ -69,10 +71,10 @@ const putMotorista = (req, res) => {
 };
 
 module.exports = {
-    getMotoristasByBairro,
-    getAll,
+	getMotoristasByBairro,
+	getAll,
 	postMotorista,
 	getById,
 	deleteMotorista,
 	putMotorista,
-}
+};
