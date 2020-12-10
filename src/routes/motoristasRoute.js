@@ -3,6 +3,7 @@ const router = express.Router();
 const controller = require("../controllers/motoristasController");
 
 router.get("/", controller.getMotoristasByBairro);
+router.get("/cidade", controller.getMotoristasByBairro);
 router.get("/ativos", controller.getMotoristasAtivos);
 router.get("/motoristas", controller.getAll);
 router.post("/", controller.postMotorista);

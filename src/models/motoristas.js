@@ -7,6 +7,7 @@ const motoristasSchema = new mongoose.Schema({
     telefone: { type: String },
     bairros: [{ type: String }],
     horarios: [{ type: String }],
+    diasSemana: [{ type: String }],
     tipoVeiculo: { type: String },
     placaVeiculo: { type: String, required: true },
     cidade: { type: String },
