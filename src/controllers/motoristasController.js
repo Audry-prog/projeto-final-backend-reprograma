@@ -38,6 +38,26 @@ const getAll = (req, res) => {
 	});
 };
 
+const getMotoristasAtivos = (req, res) => {
+	const authHeader = req.get('authorization');
+	if (!authHeader) {
+		return res.status(401).send('Header não encontrado.');
+	}
+	const token = authHeader.split(' ')[1];
+	jwt.verify(token, SECRET, function (err) {
+		if (err) {
+			return res.status(403).send('Token inválido.');
+		}
+		motoristas.find({ ativo: true }, function (err, motoristas) {
+			if (err) {
+				res.status(424).send({ message: err.message });
+			} else {
+				res.status(200).send(motoristas);
+			}
+		});
+	});
+};
+
 const postMotorista = (req, res) => {
 	const authHeader = req.get('authorization');
 	if (!authHeader) {
@@ -51,8 +71,8 @@ const postMotorista = (req, res) => {
 		let motorista = new motoristas(req.body);
 		motorista.save((err) => {
 			err ? res.status(424).send({ message: err.message }) : res.status(201).send({
-			    status: true,
-			    message: 'Novo Motorista cadastrado com sucesso',
+				status: true,
+				message: 'Novo Motorista cadastrado com sucesso',
 			});
 		});
 	});
@@ -129,6 +149,7 @@ const putMotorista = (req, res) => {
 module.exports = {
 	getMotoristasByBairro,
 	getAll,
+	getMotoristasAtivos,
 	postMotorista,
 	getById,
 	deleteMotorista,
