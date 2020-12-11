@@ -5,6 +5,8 @@
 
 ![Logo PetRide](./images/petride_logo.png)
 
+<br/>
+
 <p align="center">
   <a> 
     <img alt="Node version" src="https://img.shields.io/badge/node-%3E%3D%206.0.0-brightgreen">
@@ -15,7 +17,7 @@
   </a>
 </p>
 
-## Proposta do Projeto PetRide:
+### Proposta do Projeto PetRide:
 
 O projeto PetRide é uma API REST que permite que tutores de pets ou ONGs possam se cadastrar e realizar buscas por motoristas que oferecem ajuda no transporte solidário de animais. 
 
@@ -43,7 +45,7 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN, que v
 
 ## Como usar este projeto:
 
-# Testando as rotas na sua máquina:
+## Testando as rotas na sua máquina:
 
 1. Abra o aplicativo [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop/related?hl=pt-BR);
 
@@ -56,7 +58,7 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN, que v
 4. O TOKEN é o que dará permissão para acessar os endpoints dos motoristas, para isso deve-se criar um *header* chamado "Authorization" e passar como valor "Bearer + TOKEN copiado". Conforme imagem:
 
 ![Print Tela Postman](./images/bearer.png)
-# Criar seu próprio Banco de Dados:
+## Criar seu próprio Banco de Dados:
 
 1. Clone o projeto através do comando:
 `$git clone https://github.com/Audry-prog/projeto-final-backend-reprograma.git`
@@ -109,9 +111,9 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN, que v
 
 | Método HTTP | Endpoint                     | Descrição                               |
 | ----------- | ---------------------------- | --------------------------------------- |
-| POST        | `/tutores`                   | Cria um novo tutor                      |
+| POST        | `/tutores`                   | Cria um novo tutor no Banco de Dados    |
 | POST        | `/tutores/login`             | Autoriza o acesso ao Banco de Dados     |
-| GET         | `/tutores`                   | Retorna todos os tutores                |
+| GET         | `/tutores`                   | Retorna todos os tutores cadastrados    |
 
 ## Futuras melhorias:
 
