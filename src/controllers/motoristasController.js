@@ -33,7 +33,7 @@ const getMotoristasByCidade = (req, res) => {
 			return res.status(403).send('Token inválido.');
 		}
 		const cidade = req.query.cidade;
-		motoristas.find({ cidade: cidade }, function (err, motoristas) {
+		motoristas.find({ cidade: cidade, ativo: true }, function (err, motoristas) {
 			if (err) {
 				res.status(500).send({ message: err.message });
 			}
@@ -94,6 +94,26 @@ const getMotoristasAtivos = (req, res) => {
 			} else {
 				res.status(200).send(motoristas);
 			}
+		});
+	});
+};
+
+const getMotoristasByCidadeByAtivos = (req, res) => {
+	const authHeader = req.get('authorization');
+	if (!authHeader) {
+		return res.status(401).send('Header não encontrado.');
+	}
+	const token = authHeader.split(' ')[1];
+	jwt.verify(token, SECRET, function (err) {
+		if (err) {
+			return res.status(403).send('Token inválido.');
+		}
+		const cidade = req.query.cidade;
+		motoristas.find({ cidade: cidade, ativo: true }, function (err, motoristas) {
+			if (err) {
+				res.status(500).send({ message: err.message });
+			}
+			res.status(200).send(motoristas);
 		});
 	});
 };
@@ -192,6 +212,7 @@ module.exports = {
 	getMotoristasByHorario,
 	getAll,
 	getMotoristasAtivos,
+	getMotoristasByCidadeByAtivos,
 	postMotorista,
 	getById,
 	deleteMotorista,
