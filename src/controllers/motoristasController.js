@@ -140,11 +140,21 @@ const getById = (req, res) => {
 };
 
 const getByName = (req, res) => {
+	const authHeader = req.get('authorization');
+	if (!authHeader) {
+		return res.status(401).send('Header não encontrado.');
+	}
+	const token = authHeader.split(' ')[1];
+	jwt.verify(token, SECRET, function (err) {
+		if (err) {
+			return res.status(403).send('Token inválido.');
+		}
 	const nome = req.params.nome;
 	const MotoristasPorNome = motoristas.find(
 		(motorista) => motorista.nome.toUpperCase() === nome.toUpperCase()
 	);
 	res.status(201).send(MotoristaPorNome);
+	});
 };
 
 const deleteMotorista = (req, res) => {
