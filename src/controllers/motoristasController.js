@@ -42,6 +42,26 @@ const getMotoristasByCidade = (req, res) => {
 	});
 };
 
+const getMotoristasByHorario = (req, res) => {
+	const authHeader = req.get('authorization');
+	if (!authHeader) {
+		return res.status(401).send('Header não encontrado.');
+	}
+	const token = authHeader.split(' ')[1];
+	jwt.verify(token, SECRET, function (err) {
+		if (err) {
+			return res.status(403).send('Token inválido.');
+		}
+		const horario = req.query.horario;
+		motoristas.find({ horarios: horario }, function (err, motoristas) {
+			if (err) {
+				res.status(500).send({ message: err.message });
+			}
+			res.status(200).send(motoristas);
+		});
+	});
+};
+
 const getAll = (req, res) => {
 	const authHeader = req.get('authorization');
 	if (!authHeader) {
@@ -169,6 +189,7 @@ const putMotorista = (req, res) => {
 module.exports = {
 	getMotoristasByBairro,
 	getMotoristasByCidade,
+	getMotoristasByHorario,
 	getAll,
 	getMotoristasAtivos,
 	postMotorista,
