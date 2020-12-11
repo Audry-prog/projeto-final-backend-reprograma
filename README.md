@@ -24,7 +24,7 @@ A interface será um CRUD completo integrado com um banco de dados, onde será p
 **E Como funciona?**
 
 O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN, que viabilizará acessar as rotas do banco de dados. Caso o TOKEN não seja igual, o usuário receberá uma mensagem de erro.
-## Recursos e tecnologias utilizadas para a construção da API:
+### Recursos e tecnologias utilizadas para a construção da API:
 
 * **Node.Js** - versão 12.18.3;
 * Gerenciador de pacotes Node.Js **npm** - versão 6.14.6;
@@ -41,9 +41,9 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN, que v
 * **Postman**;
 * **Heroku**;
 
-## Como usar este projeto:
+### Como usar este projeto:
 
-## Testando as rotas na sua máquina:
+### Testando as rotas na sua máquina:
 
 1. Abra o aplicativo [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop/related?hl=pt-BR);
 
@@ -56,7 +56,7 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN, que v
 4. O TOKEN é o que dará permissão para acessar os endpoints dos motoristas, para isso deve-se criar um *header* chamado "Authorization" e passar como valor "Bearer + TOKEN copiado". Conforme imagem:
 
 ![Print Tela Postman](./images/bearer.png)
-## Criar seu próprio Banco de Dados:
+### Criar seu próprio Banco de Dados:
 
 1. Clone o projeto através do comando:
 `$git clone https://github.com/Audry-prog/projeto-final-backend-reprograma.git`
@@ -71,7 +71,7 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN, que v
 
 5. Para criar a variável SECRET do arquivo `.env`, gere uma chave pública RSA atravé do site https://travistidwell.com/jsencrypt/demo/
 
-## Arquitetura da API:
+### Estrututura de Arquivos da API:
 
 ```
 ├── src
@@ -91,7 +91,7 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN, que v
 ├── package.json
 ├── server.js
 ```
-## Mannipulação das Rotas de Motoristas:
+### Manipulação das Rotas de Motoristas:
 
 | Método HTTP | Endpoint                     | Descrição                               |
 | ----------- | ---------------------------- | --------------------------------------- |
@@ -105,7 +105,7 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN, que v
 | PUT         | `/motoristas/:id`            | Altera informações de um motorista      |
 | DELET       | `/motoristas/:id`            | Remove um motorista específico          |
 
-## Manipulação das Rotas dos Tutores:
+### Manipulação das Rotas dos Tutores:
 
 | Método HTTP | Endpoint                     | Descrição                               |
 | ----------- | ---------------------------- | --------------------------------------- |
@@ -113,7 +113,7 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN, que v
 | POST        | `/tutores/login`             | Autoriza o acesso ao Banco de Dados     |
 | GET         | `/tutores`                   | Retorna todos os tutores cadastrados    |
 
-## Futuras melhorias:
+### Futuras melhorias:
 
 A ideia para a API PetRide é que no futuro o tutor possa solicitar viagem para o motorista cadastrado e a API tenha suas rotas integradas com geolocalização. 
 
