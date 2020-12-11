@@ -107,7 +107,7 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN, que v
 | PUT         | `/motoristas/:id`            | Altera informações de um motorista      |
 | DELET       | `/motoristas/:id`            | Remove um motorista específico          |
 
-## Mannipulação das Rotas dos Tutores:
+## Manipulação das Rotas dos Tutores:
 
 | Método HTTP | Endpoint                     | Descrição                               |
 | ----------- | ---------------------------- | --------------------------------------- |
