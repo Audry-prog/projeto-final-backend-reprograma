@@ -22,7 +22,7 @@ const getMotoristasByBairro = (req, res) => {
 	});
 };
 
-const getMotoristasByCidade = (req, res) => {
+/*const getMotoristasByCidade = (req, res) => {
 	const authHeader = req.get('authorization');
 	if (!authHeader) {
 		return res.status(401).send('Header não encontrado.');
@@ -40,7 +40,7 @@ const getMotoristasByCidade = (req, res) => {
 			res.status(200).send(motoristas);
 		});
 	});
-};
+};*/
 
 const getMotoristasByCidadeByAtivos = (req, res) => {
 	const authHeader = req.get('authorization');
