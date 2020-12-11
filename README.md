@@ -11,7 +11,7 @@
     <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Audry-prog/projeto-final-backend-reprograma">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Audry-prog/projeto-final-backend-reprograma">
     <img alt="Github License" src="https://img.shields.io/github/license/Audry-prog/projeto-final-backend-reprograma?logo=MIT">
-    <a href="http://api-projeto-final.herokuapp.com/"><img src="https://img.shields.io/badge/deploy-heroku.com-blueviolet" alt="Deploy on heroku"></a>
+    <a href="https://app-petride.herokuapp.com/"><img src="https://img.shields.io/badge/deploy-heroku.com-blueviolet" alt="Deploy on heroku"></a>
   </a>
 </p>
 
@@ -29,12 +29,12 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN, que v
 * **Node.Js** - versão 12.18.3;
 * Gerenciador de pacotes Node.Js **npm** - versão 6.14.6;
 * Dependências Node.Js:
-   - **Express** - versão 4.17.1;
-   - **Mongoose** - versão 5.10.17;
-   - **Dotenv-safe** - versão 8.2.0;
-   - **Jsonwebtoken** - versão 8.5.1;
-   - **Bcrypt** - versão 5.0.0;
-   - **Nodemon** - versão 2.0.6;
+   * **Express** - versão 4.17.1;
+   * **Mongoose** - versão 5.10.17;
+   * **Dotenv-safe** - versão 8.2.0;
+   * **Jsonwebtoken** - versão 8.5.1;
+   * **Bcrypt** - versão 5.0.0;
+   * **Nodemon** - versão 2.0.6;
 * **MongoDB**;
 * **MongoDB Atlas**;
 * **Visual Studio Code**;
