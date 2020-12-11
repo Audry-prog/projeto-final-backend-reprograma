@@ -3,7 +3,7 @@
     <p align="center">Projeto Final {Reprograma} - PetRide<p>
 </h1>
 <p align="center">
-<img src="./images/petride_logo.png" width="30%" height="30%"/>
+<img src="./images/petride_logo.png" width="40%" height="40%"/>
 </p>
 <p align="center">
   <a> 
@@ -19,11 +19,11 @@
 
 O projeto PetRide é uma API REST que permite que tutores de pets ou ONGs possam se cadastrar e realizar buscas por motoristas que oferecem ajuda no transporte solidário de animais. 
 
-A interface será um CRUD completo integrado com um banco de dados, onde será possível listar os motoristas cadastrados na base de dados; cadastrar novos motoristas; atualizar dados; visualizar horários, dias disponíveis e bairros onde o motorista se propõe a transportar.
+A interface é um CRUD completo integrado com um banco de dados, onde é possível listar os motoristas cadastrados na base de dados; cadastrar novos motoristas; atualizar dados; visualizar horários, dias disponíveis, bairros onde o motorista se propõe a transportar, e se o motorista está ativo ou inativo no Banco de Dados.
 
 **E Como funciona?**
 
-O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN, que viabilizará acessar as rotas do banco de dados. Caso o TOKEN não seja igual, o usuário receberá uma mensagem de erro.
+O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN que viabilizará acessar as rotas do banco de dados. Caso o TOKEN não seja igual, o usuário receberá uma mensagem de erro, ou por ausência da mesma, ou por não conferir com a que está rgistrada pelo sistema.
 ### Recursos e tecnologias utilizadas para a construção da API:
 
 * **Node.Js** - versão 12.18.3;
@@ -53,7 +53,7 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN, que v
 
 4. Após cadastro, o tutor deve fazeer login através da URL https://app-petride.herokuapp.com/tutores/login e copiar o TOKEN gerado como *result* do Postman após o envio da requisição.
 
-4. O TOKEN é o que dará permissão para acessar os endpoints dos motoristas, para isso deve-se criar um *header* chamado "Authorization" e passar como valor "Bearer + TOKEN copiado". Conforme imagem:
+5. O TOKEN é o que dará permissão para acessar os endpoints dos motoristas, para isso deve-se criar um *header* chamado **"Authorization"** e passar como valor **"Bearer + TOKEN copiado"**. Conforme imagem:
 
 ![Print Tela Postman](./images/bearer.png)
 ### Criar seu próprio Banco de Dados:
