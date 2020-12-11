@@ -150,7 +150,7 @@ const getByName = (req, res) => {
 			return res.status(403).send('Token inválido.');
 		}
 		const nome = req.params.nome;
-		motoristas.find({ nome }, (err, motoristas) => {
+		motoristas.find({ nome: nome }, (err, motoristas) => {
 			if (err) {
 				res.status(424).send({ message: err.message });
 			} else {
