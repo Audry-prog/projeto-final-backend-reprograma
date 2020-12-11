@@ -2,11 +2,9 @@
     <br>
     <p align="center">Projeto Final {Reprograma} - PetRide<p>
 </h1>
-
-<img src="./images/petride_logo.png" width="30%" height="30%" display: block 
-    margin-left: auto;
-    margin-right: auto/>
-
+<p align="center">
+<img src="./images/petride_logo.png" width="30%" height="30%"/>
+</p>
 <p align="center">
   <a> 
     <img alt="Node version" src="https://img.shields.io/badge/node-%3E%3D%206.0.0-brightgreen">
