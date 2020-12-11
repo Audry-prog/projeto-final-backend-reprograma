@@ -139,6 +139,14 @@ const getById = (req, res) => {
 	});
 };
 
+const getByName = (req, res) => {
+	const nome = req.params.nome;
+	const MotoristasPorNome = motoristas.find(
+		(motorista) => motorista.nome.toUpperCase() === nome.toUpperCase()
+	);
+	res.status(201).send(MotoristaPorNome);
+};
+
 const deleteMotorista = (req, res) => {
 	const authHeader = req.get('authorization');
 	if (!authHeader) {
@@ -194,6 +202,7 @@ module.exports = {
 	getMotoristasAtivos,
 	postMotorista,
 	getById,
+	getByName,
 	deleteMotorista,
 	putMotorista,
 };
