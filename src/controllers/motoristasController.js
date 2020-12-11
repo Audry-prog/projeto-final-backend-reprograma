@@ -139,27 +139,6 @@ const getById = (req, res) => {
 	});
 };
 
-const getByName = (req, res) => {
-	const authHeader = req.get('authorization');
-	if (!authHeader) {
-		return res.status(401).send('Header não encontrado.');
-	}
-	const token = authHeader.split(' ')[1];
-	jwt.verify(token, SECRET, function (err) {
-		if (err) {
-			return res.status(403).send('Token inválido.');
-		}
-		const nome = req.params.nome;
-		motoristas.find({ nome: nome }, (err, motoristas) => {
-			if (err) {
-				res.status(424).send({ message: err.message });
-			} else {
-				res.status(200).send(motoristas);
-			}
-		});	
-	});
-};
-
 const deleteMotorista = (req, res) => {
 	const authHeader = req.get('authorization');
 	if (!authHeader) {
@@ -215,7 +194,6 @@ module.exports = {
 	getMotoristasAtivos,
 	postMotorista,
 	getById,
-	getByName,
 	deleteMotorista,
 	putMotorista,
 };
