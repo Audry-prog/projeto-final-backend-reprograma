@@ -189,7 +189,6 @@ const putMotorista = (req, res) => {
 module.exports = {
 	getMotoristasByBairro,
 	getMotoristasByCidade,
-	getMotoristasByCidadeByAtivos,
 	getMotoristasByHorario,
 	getAll,
 	getMotoristasAtivos,
