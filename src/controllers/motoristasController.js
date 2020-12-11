@@ -150,7 +150,7 @@ const getByName = (req, res) => {
 			return res.status(403).send('Token inválido.');
 		}
 	const nome = req.params.nome;
-	const MotoristasPorNome = motoristas.find(
+	const MotoristaPorNome = motoristas.find(
 		(motorista) => motorista.nome.toUpperCase() === nome.toUpperCase()
 	);
 	res.status(201).send(MotoristaPorNome);
