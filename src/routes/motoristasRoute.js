@@ -8,7 +8,7 @@ router.get("/horarios", controller.getMotoristasByHorario,)
 router.get("/ativos", controller.getMotoristasAtivos);
 router.get("/motoristas", controller.getAll);
 router.get("/:id", controller.getById);
-router.get("/:nome", controller.getByName);
+router.get("/nome/:nome", controller.getByName);
 router.post("/", controller.postMotorista);
 router.delete("/:id", controller.deleteMotorista);
 router.put("/:id", controller.putMotorista);
