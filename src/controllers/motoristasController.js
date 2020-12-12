@@ -109,7 +109,8 @@ const getMotoristasByCidadeByAtivos = (req, res) => {
 			return res.status(403).send('Token inválido.');
 		}
 		const cidade = req.query.cidade;
-		motoristas.find({ cidade: cidade, ativo: true }, function (err, motoristas) {
+		const ativo = req.query.ativo;
+		motoristas.find({ cidade: cidade, ativo: ativo }, function (err, motoristas) {
 			if (err) {
 				res.status(500).send({ message: err.message });
 			}
