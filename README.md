@@ -152,3 +152,9 @@ A ideia para a PetRide é que no futuro o tutor possa solicitar viagem ao motori
 Outra implementação que se pretende no futuro é desenvolver as interfaces Front-end de comunicação com o código.
 
 Caso queira contribuir com meu projeto, será totalmente bem-vindo!!!
+
+<p align="center">
+<img src="./images/dogs_and_cats.png" width="50%" height="50%"/>
+</p>
+<p align="center">
+  <a> 
