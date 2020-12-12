@@ -115,6 +115,11 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN que vi
 | GET         | `/tutores`                   | Retorna todos os tutores do Banco de Dados |
 | DELET       | `/tutores/:id`               | Remove o cadastro de um tutor específico   |
 
+### Alguns prints dos endpoints:
+
+| POST        | `/tutores`                   | Cria um novo tutor no Banco |
+
+![Print Tela Create Tutor](./images/postTutores.png)
 
 ### Futuras melhorias:
 
