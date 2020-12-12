@@ -49,13 +49,15 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN que vi
 
 2. Teste as rotas usando este endereço na URL do Postman: https://app-petride.herokuapp.com/ na URL do POSTMAN.
 
-3. As rotas/endpoints só estarão disponiveis após o cadastro do tutor e registro de uma senha de acesso. Para isso deve-se usar a URL https://app-petride.herokuapp.com/tutores no Postman cadastrar o tutor, clicando em *body* e posteriormente em *raw*, para trocar a combobox "text" para *JSON* e apertar *Send*.
+3. As rotas/endpoints só estarão disponiveis após o cadastro do tutor e registro de uma senha de acesso. Para isso deve-se usar a URL https://app-petride.herokuapp.com/tutores no Postman cadastrar o tutor, clicando em *body* e posteriormente em *raw*, para trocar a combobox *text* para *JSON* e apertar *Send*.
 
-4. Após cadastro, o tutor deve fazeer login através da URL https://app-petride.herokuapp.com/tutores/login e copiar o TOKEN gerado como *result* do Postman após o envio da requisição.
+4. Após cadastro, o tutor deve fazer login através da URL https://app-petride.herokuapp.com/tutores/login e copiar o TOKEN gerado como *result* do Postman após o envio da requisição. Conforme imagem abaixo:
 
-5. O TOKEN é o que dará permissão para acessar os endpoints dos motoristas, para isso deve-se criar um *header* chamado **"Authorization"** e passar como valor **"Bearer + TOKEN copiado"**. Conforme imagem:
+![Print Result Login Postman](./images/loginTutores.png)
 
-![Print Tela Postman](./images/bearer.png)
+5. O TOKEN é o que dará permissão para acessar os endpoints dos motoristas, para isso deve-se criar um *header* chamado **"Authorization"** e passar como valor **"Bearer + TOKEN copiado"**. Conforme imagem abaixo:
+
+![Print Tela Postman "Bearer"](./images/bearer.png)
 ### Criar seu próprio Banco de Dados:
 
 1. Clone o projeto através do comando:
@@ -115,11 +117,31 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN que vi
 | GET         | `/tutores`                   | Retorna todos os tutores do Banco de Dados |
 | DELET       | `/tutores/:id`               | Remove o cadastro de um tutor específico   |
 
-### Alguns prints dos endpoints:
+### Alguns prints das requisições feitas no Postman:
 
 | POST        | `/tutores`                   | Cria um novo tutor no Banco |
 
 ![Print Tela Create Tutor](./images/postTutores.png)
+
+| GET         | `/motoristas/cidade`         | Retorna todos os motoristas por cidade        |
+
+![Print Tela Motoristas By Cidade](./images/getMotoristaByCidade.png)
+
+| GET         | `/motoristas/ativos`         | Retorna todos os motoristas ativos            |
+
+![Print Tela Motoristas Ativos](./images/getMotoristasAtivos.png)
+
+| GET         | `/motoristas/cidade/ativos`  | Retorna todos os motoristas por cidade ativos |
+
+![Print Tela Motoristas Ativos por Cidade](./images/getMotoristasByCidadeByAtivos.png)
+
+| GET         | `/motoristas/horarios`       | Retorna todos os motoristas por horário       |
+
+![Print Tela Motoristas Ativos por Horário](./images/getMotoristasByCidadeByHorario.png)
+
+| POST        | `/tutores`                   | Cria um novo tutor no Banco de Dados       |
+
+![Print Tela Post Tutores](./images/postTutores.png)
 
 ### Futuras melhorias:
 
