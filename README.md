@@ -5,7 +5,7 @@
 <p align="center">
 <img src="./images/petride_logo.png" width="40%" height="40%"/>
 </p>
-<p align="center">
+<p align="center">np
   <a> 
     <img alt="Node version" src="https://img.shields.io/badge/node-%3E%3D%206.0.0-brightgreen">
     <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/Audry-prog/projeto-final-backend-reprograma">

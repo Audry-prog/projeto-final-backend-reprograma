@@ -1,0 +1,540 @@
+{
+	"info": {
+		"_postman_id": "8b030847-7a6d-447d-9022-95b5c1c8e92f",
+		"name": "PetRide",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create tutores",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"nomeTutor\": \"Audry Ávalos\",\r\n    \"nomePet\": \"Khira\",\r\n    \"porte\": \"pequeno\",\r\n    \"telefone\": \"5581996431463\",\r\n    \"email\": \"aavalos@icint.com\",\r\n    \"senha\": \"Hyale@12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://app-petride.herokuapp.com/tutores",
+					"protocol": "https",
+					"host": [
+						"app-petride",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"tutores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login tutores",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"aavalos@icint.com\",\r\n    \"senha\": \"Hyale@12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://app-petride.herokuapp.com/tutores/login",
+					"protocol": "https",
+					"host": [
+						"app-petride",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"tutores",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post motorista",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFhdmFsb3NAaWNpbnQuY29tIiwiaWF0IjoxNjA3NjM5NjY5fQ.NSjpSfnC2_mIFEODLo6j8QeYcwxR4AfBMXfOsxxP95Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"nome\": \"Priscilla Carolina da Conceição\",\r\n    \"email\": \"priscilacc11@onset.com.br\",\r\n    \"telefone\": \"81999580950\",\r\n    \"bairros\": [\"Boa Viagem\", \"Setúbal\", \"Pina\"],\r\n    \"horarios\": [\"10h\", \"11h\", \"12h\"],\r\n    \"diasSemana\": [ \"segunda\", \"quarta\", \"sexta\"],\r\n    \"tipoVeiculo\": \"passeio\",\r\n    \"placaVeiculo\": \"MOK6503\",\r\n    \"cidade\": \"Recife\",\r\n    \"estado\": \"Pernambuco\",\r\n    \"despesaTrajeto\": \"R$ 5,00\",\r\n    \"ativo\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://app-petride.herokuapp.com/motoristas",
+					"protocol": "https",
+					"host": [
+						"app-petride",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"motoristas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get motoristas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFhdmFsb3NAaWNpbnQuY29tIiwiaWF0IjoxNjA3NjM5NjY5fQ.NSjpSfnC2_mIFEODLo6j8QeYcwxR4AfBMXfOsxxP95Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://app-petride.herokuapp.com/motoristas/motoristas",
+					"protocol": "https",
+					"host": [
+						"app-petride",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"motoristas",
+						"motoristas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFhdmFsb3NAaWNpbnQuY29tIiwiaWF0IjoxNjA3NjM5NjY5fQ.NSjpSfnC2_mIFEODLo6j8QeYcwxR4AfBMXfOsxxP95Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://app-petride.herokuapp.com/motoristas/2",
+					"protocol": "https",
+					"host": [
+						"app-petride",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"motoristas",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get motoristas by bairro",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFhdmFsb3NAaWNpbnQuY29tIiwiaWF0IjoxNjA3NjM5NjY5fQ.NSjpSfnC2_mIFEODLo6j8QeYcwxR4AfBMXfOsxxP95Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://app-petride.herokuapp.com/motoristas?bairro=Pina",
+					"protocol": "https",
+					"host": [
+						"app-petride",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"motoristas"
+					],
+					"query": [
+						{
+							"key": "bairro",
+							"value": "Pina"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete motorista",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFhdmFsb3NAaWNpbnQuY29tIiwiaWF0IjoxNjA3NjM5NjY5fQ.NSjpSfnC2_mIFEODLo6j8QeYcwxR4AfBMXfOsxxP95Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://app-petride.herokuapp.com/motoristas/5",
+					"protocol": "https",
+					"host": [
+						"app-petride",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"motoristas",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put motorista",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFhdmFsb3NAaWNpbnQuY29tIiwiaWF0IjoxNjA3NjM5NjY5fQ.NSjpSfnC2_mIFEODLo6j8QeYcwxR4AfBMXfOsxxP95Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bairros\": [\r\n        \"Boa Viagem\",\r\n        \"Pina\",\r\n        \"Massangana\"\r\n    ],\r\n    \"horarios\": [\r\n        \"18h\",\r\n        \"19h\",\r\n        \"20h\"\r\n    ],\r\n    \"diasSemana\": [\r\n        \"terça\",\r\n        \"quinta\"\r\n    ],\r\n    \"_id\": \"5fd2a4c2fb6c170004986934\",\r\n    \"id\": 4,\r\n    \"nome\": \"João Augusto Cordeiro de Paula\",\r\n    \"email\": \"ja_dePaula@dunprel.com.br\",\r\n    \"telefone\": \"81931390950\",\r\n    \"tipoVeiculo\": \"passeio\",\r\n    \"placaVeiculo\": \"JYU1133\",\r\n    \"cidade\": \"Recife\",\r\n    \"estado\": \"Pernambuco\",\r\n    \"despesaTrajeto\": \"R$ 7,00\",\r\n    \"ativo\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://app-petride.herokuapp.com/motoristas/4",
+					"protocol": "https",
+					"host": [
+						"app-petride",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"motoristas",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get motoristas by cidade",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFhdmFsb3NAaWNpbnQuY29tIiwiaWF0IjoxNjA3NjM5NjY5fQ.NSjpSfnC2_mIFEODLo6j8QeYcwxR4AfBMXfOsxxP95Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://app-petride.herokuapp.com/motoristas/cidade?cidade=Olinda",
+					"protocol": "https",
+					"host": [
+						"app-petride",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"motoristas",
+						"cidade"
+					],
+					"query": [
+						{
+							"key": "cidade",
+							"value": "Olinda"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get motoristas ativos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFhdmFsb3NAaWNpbnQuY29tIiwiaWF0IjoxNjA3NjM5NjY5fQ.NSjpSfnC2_mIFEODLo6j8QeYcwxR4AfBMXfOsxxP95Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://app-petride.herokuapp.com/motoristas/ativos",
+					"protocol": "https",
+					"host": [
+						"app-petride",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"motoristas",
+						"ativos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get tutores",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRoaWFnb19Nb3JhZXM3OEBzdXBsYWlyLmNvbSIsImlhdCI6MTYwNzY0NzY0MH0.mSZzuhIkukVJ2rdSnjaoy2kLUenRpbi4Na-76tIPlrU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://app-petride.herokuapp.com/tutores",
+					"protocol": "https",
+					"host": [
+						"app-petride",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"tutores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get motoristas by horario",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRoaWFnb19Nb3JhZXM3OEBzdXBsYWlyLmNvbSIsImlhdCI6MTYwNzY0NzY0MH0.mSZzuhIkukVJ2rdSnjaoy2kLUenRpbi4Na-76tIPlrU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://app-petride.herokuapp.com/motoristas/horarios?horario=10h",
+					"protocol": "https",
+					"host": [
+						"app-petride",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"motoristas",
+						"horarios"
+					],
+					"query": [
+						{
+							"key": "horario",
+							"value": "10h"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete tutor",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFhdmFsb3NAaWNpbnQuY29tIiwiaWF0IjoxNjA3NzI3MjY1fQ.xoYQg208YPgxtkANppMnPI7-1qR9e24ZvvX7Es-JIGM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://app-petride.herokuapp.com/tutores/1",
+					"protocol": "https",
+					"host": [
+						"app-petride",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"tutores",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get motoristas by cidade filtrada by ativo true",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFhdmFsb3NAaWNpbnQuY29tIiwiaWF0IjoxNjA3NzI3MjY1fQ.xoYQg208YPgxtkANppMnPI7-1qR9e24ZvvX7Es-JIGM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://app-petride.herokuapp.com/motoristas/cidade?cidade=Olinda&&ativo=true",
+					"protocol": "https",
+					"host": [
+						"app-petride",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"motoristas",
+						"cidade"
+					],
+					"query": [
+						{
+							"key": "cidade",
+							"value": "Olinda"
+						},
+						{
+							"key": null,
+							"value": null
+						},
+						{
+							"key": "ativo",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
