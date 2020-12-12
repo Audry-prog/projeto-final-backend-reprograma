@@ -5,7 +5,7 @@ const controller = require("../controllers/motoristasController");
 router.get("/", controller.getMotoristasByBairro);
 router.get("/cidade", controller.getMotoristasByCidade); 
 router.get("/horarios", controller.getMotoristasByHorario);
-router.get("/cidade/ativos", controller.getMotoristasByCidadeByAtivos)
+router.get("/cidade/ativos", controller.getMotoristasByCidadeByAtivos);
 router.get("/ativos", controller.getMotoristasAtivos);
 router.get("/motoristas", controller.getAll);
 router.get("/:id", controller.getById);

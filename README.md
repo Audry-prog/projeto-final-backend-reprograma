@@ -93,25 +93,28 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN que vi
 ```
 ### Manipulação das Rotas de Motoristas:
 
-| Método HTTP | Endpoint                     | Descrição                               |
-| ----------- | ---------------------------- | --------------------------------------- |
-| POST        | `/motoristas`                | Cria um novo motorista                  |
-| GET         | `/`                          | Retorna todos os motoristas por bairro  |
-| GET         | `/motoristas/motoristas`     | Retorna todos os motoristas             |
-| GET         | `/motoristas/:id`            | Retorna um motorista específico por id  |
-| GET         | `/motoristas/cidade`         | Retorna todos os motoristas por cidade  |
-| GET         | `/motoristas/ativos`         | Retorna todos os motoristas por ativos  |
-| GET         | `/motoristas/horarios`       | Retorna todos os motoristas por horário |
-| PUT         | `/motoristas/:id`            | Altera informações de um motorista      |
-| DELET       | `/motoristas/:id`            | Remove um motorista específico          |
+| Método HTTP | Endpoint                     | Descrição                                     |
+| ----------- | ---------------------------- | --------------------------------------------- |
+| POST        | `/motoristas`                | Cria um novo motorista                        |
+| GET         | `/`                          | Retorna todos os motoristas por bairro        |
+| GET         | `/motoristas/motoristas`     | Retorna todos os motoristas                   |
+| GET         | `/motoristas/:id`            | Retorna um motorista específico por id        |
+| GET         | `/motoristas/cidade`         | Retorna todos os motoristas por cidade        |
+| GET         | `/motoristas/ativos`         | Retorna todos os motoristas ativos            |
+| GET         | `/motoristas/cidade/ativos`  | Retorna todos os motoristas por cidade ativos |
+| GET         | `/motoristas/horarios`       | Retorna todos os motoristas por horário       |
+| PUT         | `/motoristas/:id`            | Altera informações de um motorista            |
+| DELET       | `/motoristas/:id`            | Remove um motorista específico                |
 
-### Manipulação das Rotas dos Tutores:
+### Manipulação das Rotas de Tutores:
 
-| Método HTTP | Endpoint                     | Descrição                               |
-| ----------- | ---------------------------- | --------------------------------------- |
-| POST        | `/tutores`                   | Cria um novo tutor no Banco de Dados    |
-| POST        | `/tutores/login`             | Autoriza o acesso ao Banco de Dados     |
-| GET         | `/tutores`                   | Retorna todos os tutores cadastrados    |
+| Método HTTP | Endpoint                     | Descrição                                  |
+| ----------- | ---------------------------- | ------------------------------------------ |
+| POST        | `/tutores`                   | Cria um novo tutor no Banco de Dados       |
+| POST        | `/tutores/login`             | Autoriza o acesso ao Banco de Dados        |
+| GET         | `/tutores`                   | Retorna todos os tutores do Banco de Dados |
+| DELET       | `/tutores/:id`               | Remove o cadastro de um tutor específico   |
+
 
 ### Futuras melhorias:
 
