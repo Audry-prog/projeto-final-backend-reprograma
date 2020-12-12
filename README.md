@@ -49,7 +49,7 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN que vi
 
 1. Abra o aplicativo [POSTMAN](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop/related?hl=pt-BR);
 
-2. Teste as rotas usando este endereço na URL do Postman: https://app-petride.herokuapp.com/ na URL do POSTMAN.
+2. Teste as rotas usando este endereço na URL do Postman: https://app-petride.herokuapp.com/ 
 
 3. As rotas/endpoints só estarão disponiveis após o cadastro do tutor e registro de uma senha de acesso. Para isso deve-se usar a URL https://app-petride.herokuapp.com/tutores no Postman cadastrar o tutor, clicando em *body* e posteriormente em *raw*, para trocar a combobox *text* para *JSON* e apertar *Send*.
 
@@ -147,6 +147,8 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN que vi
 
 ### Futuras melhorias:
 
-A ideia para a API PetRide é que no futuro o tutor possa solicitar viagem para o motorista cadastrado e a API tenha suas rotas integradas com geolocalização. 
+A ideia para a PetRide é que no futuro o tutor possa solicitar viagem ao motorista cadastrado e a API tenha suas rotas integradas com geolocalização, e possa fazer o pagamento da taxa solidária da viagem ao motorista.
+
+Outra implementação que se pretende no futuro é desenvolver as interfaces Front-end de comunicação com o código.
 
 Caso queira contribuir com meu projeto, será totalmente bem-vindo!!!
