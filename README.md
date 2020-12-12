@@ -3,7 +3,7 @@
     <p align="center">Projeto Final {Reprograma} - PetRide<p>
 </h1>
 <p align="center">
-<img src="./images/petride_logo.png" width="40%" height="40%"/>
+<img src="./images/petride_logo.png" width="50%" height="50%"/>
 </p>
 <p align="center">
   <a> 
