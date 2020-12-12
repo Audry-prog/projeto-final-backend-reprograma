@@ -6,8 +6,8 @@ const tutoresSchema = new mongoose.Schema({
     nomePet: { type: String },
     porte: { type: String },
     telefone: { type: String },
-    email: { type: String },
-    senha: { type: String }
+    email: { type: String, required: true },
+    senha: { type: String, required: true },
 },{
     //gera por padrão uma versão para cada atualização do documento
     versionKey: false
