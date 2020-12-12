@@ -30,6 +30,7 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN que vi
 * Gerenciador de pacotes Node.Js **npm** - versão 6.14.6;
 * Dependências Node.Js:
    * **Express** - versão 4.17.1;
+   * **Body-parser** - versão 1.19.0;
    * **Mongoose** - versão 5.10.17;
    * **Dotenv-safe** - versão 8.2.0;
    * **Jsonwebtoken** - versão 8.5.1;
@@ -37,6 +38,7 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN que vi
    * **Nodemon** - versão 2.0.6;
 * **MongoDB**;
 * **MongoDB Atlas**;
+* **Git**;
 * **Visual Studio Code**;
 * **Postman**;
 * **Heroku**;
@@ -67,7 +69,7 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN que vi
 `$npm install`
 
 3. Inicialize o servidor do projeto com o comando:
-`$npm start`
+`$npm run dev`
 
 4. Renomeie o arquivo `.env.exemple` para `.env` e crie as variáveis de ambiente.
 
@@ -137,7 +139,7 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN que vi
 
 | GET         | `/motoristas/horarios`       | Retorna todos os motoristas por horário       |
 
-![Print Tela Motoristas Ativos por Horário](./images/getMotoristasByCidadeByHorario.png)
+![Print Tela Motoristas Ativos por Horário](./images/getMotoristasByHorario.png)
 
 | POST        | `/tutores`                   | Cria um novo tutor no Banco de Dados       |
 
