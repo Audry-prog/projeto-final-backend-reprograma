@@ -23,7 +23,7 @@ A interface é um CRUD completo integrado com um banco de dados, onde é possív
 
 **E Como funciona?**
 
-O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN que viabilizará acessar as rotas do banco de dados. Caso o TOKEN não seja igual, o usuário receberá uma mensagem de erro, ou por ausência da mesma, ou por não conferir com a que está rgistrada pelo sistema.
+O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN que viabilizará acessar as rotas do banco de dados. Caso o TOKEN não seja igual, o usuário receberá uma mensagem de erro por ausência da mesma, ou por não conferir com a que está rgistrada pelo sistema.
 ### Recursos e tecnologias utilizadas para a construção da API:
 
 * **Node.Js** - versão 12.18.3;
