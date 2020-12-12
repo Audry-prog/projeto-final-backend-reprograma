@@ -154,7 +154,7 @@ Outra implementação que se pretende no futuro é desenvolver as interfaces Fro
 Caso queira contribuir com meu projeto, será totalmente bem-vindo!!!
 
 <p align="center">
-<img src="./images/cats_and_dogs.jpeg" width="50%" height="50%" background="white"/>
+<img src="./images/cats_and_dogs.jpeg" width="30%" height="30%" background="white"/>
 </p>
 <p align="center">
   <a> 
