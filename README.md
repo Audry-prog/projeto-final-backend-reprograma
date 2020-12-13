@@ -104,6 +104,7 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN que vi
 | GET         | `/motoristas/motoristas`     | Retorna todos os motoristas                   |
 | GET         | `/motoristas/:id`            | Retorna um motorista específico por id        |
 | GET         | `/motoristas/cidade`         | Retorna todos os motoristas por cidade        |
+| GET         | `/motoristas/bairros`        | Retorna todos os motoristas ativos            |
 | GET         | `/motoristas/ativos`         | Retorna todos os motoristas ativos            |
 | GET         | `/motoristas/cidade/ativos`  | Retorna todos os motoristas ativos por cidade |
 | GET         | `/motoristas/horarios`       | Retorna todos os motoristas por horário       |
