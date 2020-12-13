@@ -141,9 +141,9 @@ O tutor ou a ONG deve fazer o login no sistema onde será gerado um TOKEN que vi
 
 ![Print Tela Motoristas Ativos por Horário](./images/getMotoristasByHorario.png)
 
-| POST        | `/tutores`                   | Cria um novo tutor no Banco de Dados       |
+| POST        | `/motoristas`                | Cria um novo motorista                        |
 
-![Print Tela Post Tutores](./images/postTutores.png)
+![Print Tela Post Tutores](./images/postMotoristas.png)
 
 ### Futuras melhorias:
 
